@@ -12,7 +12,7 @@ DIJKSTROV ALGORITEM
 Prva metoda, katero bomo obravnavale je Dijkstrov algoritem. Ta poišče najkrajšo pot v usmerjenem ali neusmerjenem grafu G(V,E) s pozitivnimi utežmi w. V danem grafu izberemo vozlišče S∈ V(G), ki mu pravimo izvor. Iščemo drevo najkrajših poti od S v G. 
 
 Opis algoritma
-
+```
 Vhodni podatki: G, S
 Izhodni podatki: d[ ],π[ ]  (seznam razdalj in prednikov)
 for v ∈ V(G):
@@ -28,6 +28,7 @@ dokler Q neprazna:
 			d[v] = d[u] + w(uv)
 			π[v] = u
 return d[ ], π[ ]
+```
 
 Za negativne uteži lahko Dijkstrov algoritem vrne napačen rezultat, če pa so uteži w=0, pa dela pravilno. Večino algoritmov, tudi tega, lahko spremenimo, da delajo pravilno, če odstranimo cikle, ki imajo negativno skupno težo.
 Če iščemo razdaljo od S do T, lahko algoritem končamo, ko vzamemo T iz Q.
